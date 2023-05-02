@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bgPic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.start {
+    position: relative;
+    top: 150px;
+    text-align: center;
+
+}
+
+#btn {
+    display: none;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    border: 3px solid rgb(255, 241, 235);
+    border-radius: 10px;
+    background: transparent;
+    color: rgb(255, 241, 235);
+}
+
+.gameOver {
+    position: relative;
+    top: 50px;
+    font-size: 120px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.score {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px;
+}
+
+.girl {
+    background-image: url(girl.png);
+    background-repeat: no-repeat;
+    height: 140px;
+    width: 50px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+.don {
+    background-image: url(don.png);
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 90px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.jump {
+    animation: girl 0.8s linear;
+}
+
+.donAnimation {
+    animation: don 5s linear infinite;
+}
+
+@keyframes girl {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 170px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes don {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
